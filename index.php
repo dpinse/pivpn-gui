@@ -53,7 +53,7 @@ function head(){
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="description" content="">
     	<meta name="author" content="">
-	    <title><?php echo exec("hostname"); ?> Admin Panel</title>
+	    <title><?php echo exec("hostname"); ?> PiVPN Dashboard</title>
 	    <!-- Bootstrap Core CSS -->
 	    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	    
