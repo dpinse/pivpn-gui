@@ -1,11 +1,11 @@
-# OpenRSD - Stable - State: Usable
+# PiVPN GUI - Stable - State: Usable
 
-### What is OpenRSD
-OpenRSD or ORSD is a set of PHP scripts, JS, HTML, and BootStrap CSS to create a beautiful, easy to use, responsive Dashboard to manage Raspbian based distros for the RPi2-3.
+### What is PiVPN GUI
+PiVPN GUI is a set of PHP scripts, JS, HTML, and BootStrap CSS to create a beautiful, easy to use, responsive Dashboard to manage PiVPN for the RPi2-3.
 
-After months of testing, OpenRSD seems to be stable. Please put issues on GitHub if you find any bugs. 
+After months of testing, PiVPN GUI seems to be stable. Please put issues on GitHub if you find any bugs. 
 
 
 ### How to install
 
-Please visit [URGERO.ORG Installation guide](https://urgero.org/index.php?page=howto/linux/openrsd.md)
+Please visit [pivpn.io](http://pivpn.io) for more information.
