@@ -29,6 +29,6 @@ After months of testing, PiVPN GUI seems to be stable. Please put issues on GitH
 4. Then run: ```sudo service apache2 restart```
 5. Then run: ```cd /var/www/html```
 6. Then run: ```rm -f index.html``` *Optional!
-7. Then run: ```git clone https://github.com/mitchellurgero/pivpn-gui```
+7. Then run: ```git clone https://github.com/AnnonZerp/pivpn-gui```
 
 Please visit [pivpn.io](http://pivpn.io) for more information.
