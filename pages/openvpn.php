@@ -12,7 +12,7 @@ echo '';
             <h1 class="page-header">PiVPN Profiles <small><a href="#"><div onClick="pageLoad('PiVPN');" class="fa fa-refresh rotate"></div></a></small></h1>
 	    <small>This page only works with <a href="http://pivpn.io" target="_blank">pivpn.io</a></small>
 		<br />
-		<button class="btn btn-sm btn-raised btn-info" onclick="createProfile()">Create VPN Profile</button>
+		<button class="btn btn-sm btn-raised btn-info" type="button" onclick="createProfile()">Create VPN Profile</button>
         </div>
     </div>
     <div class="row">

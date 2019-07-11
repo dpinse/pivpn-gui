@@ -381,11 +381,13 @@ function runScript(filename){
 function oProfile(){
 	load(true)
 	user = document.getElementById("profile_name").value;
+	days = document.getElementById("expiration_days").value;
 	$.ajax({
 		method:'post',
 		url:'./app/profile.php',
 		data:{
-			profile:user
+			profile:user,
+			days:days
 		},
 		success:function(result) {
 			load(false);
@@ -423,7 +425,8 @@ function rProfile(user){
 }
 function createProfile(){
 	profileForm = '<input class="form-control" type="text" placeholder="Profile Name" name="profile_name" id="profile_name">';
-	profileForm += '<br /><br /> <button class="btn btn-sm btn-raised btn-info pull-right" onclick="oProfile();">Create Profile</button><br /><br />';
+	profileForm += '<br /><input class="form-control" type="text" placeholder="Expiration Days" name="expiration_days" id="expiration_days">';
+	profileForm += '<br /><br /> <button class="btn btn-sm btn-raised btn-info pull-right" type="button" onclick="oProfile();">Create Profile</button><br /><br />';
 
 	genModal("Create new PiVPN Profile", profileForm);
 
