@@ -6,10 +6,15 @@ if(!isset($_SESSION['username'])){
 	die("You must be logged in to view this page!");
 }
 if(!isset($_POST['profile'])){ die("No profile name selected!"); }
+$days = 1080; // Days is set with a default prompt value.
+if (isset($_POST['days']))
+{
+    $days = $_POST['days'];
+}
 $pro = $_POST['profile'];
-add_vpn_profile($pro);
+add_vpn_profile($pro, $days);
 //Run selected script, but only if it exists in the scr_up folder.
-function add_vpn_profile($profile) {
+function add_vpn_profile($profile, $d) {
 	
     // Open a handle to expect in write mode
     $p = popen('sudo /usr/bin/expect','w');
@@ -24,6 +29,8 @@ function add_vpn_profile($profile) {
     $cmd .= "send \"pivpn add nopass\\r\"; ";
     $cmd .= "expect \"Enter a Name for the Client:   \"; ";
     $cmd .= "send \"$profile\\r\"; ";
+    $cmd .= "expect \"How many days should the certificate last?  $d\"; ";
+    $cmd .= "send \"\\b\\b\\b\\b$d\\r\"; ";
     $cmd .= "expect \"for easy transfer.\"; ";
     // Commit the command to expect & close
     fwrite($p, $cmd); pclose ($p);
